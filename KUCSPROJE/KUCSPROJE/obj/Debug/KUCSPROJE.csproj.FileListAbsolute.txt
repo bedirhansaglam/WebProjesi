@@ -1,0 +1,24 @@
+D:\WEB PROJE YEDEK\KUCSPROJE\KUCSPROJE\bin\KUCSPROJE.dll
+D:\WEB PROJE YEDEK\KUCSPROJE\KUCSPROJE\bin\KUCSPROJE.pdb
+D:\WEB PROJE YEDEK\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.csprojResolveAssemblyReference.cache
+D:\WEB PROJE YEDEK\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.dll
+D:\WEB PROJE YEDEK\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.pdb
+C:\Users\Bedirhan\Documents\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\KUCSPROJE.dll
+C:\Users\Bedirhan\Documents\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\KUCSPROJE.pdb
+C:\Users\Bedirhan\Documents\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.dll
+C:\Users\Bedirhan\Documents\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.pdb
+C:\Users\Bedirhan\Documents\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.csprojResolveAssemblyReference.cache
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\KUCSPROJE.dll.config
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\KUCSPROJE.dll
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\KUCSPROJE.pdb
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\System.Web.Helpers.dll
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\System.Web.WebPages.dll
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\Microsoft.Web.Infrastructure.dll
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\System.Web.WebPages.Deployment.dll
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\System.Web.Helpers.xml
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\System.Web.WebPages.xml
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\Microsoft.Web.Infrastructure.xml
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\bin\System.Web.WebPages.Deployment.xml
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.csprojResolveAssemblyReference.cache
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.dll
+F:\PROJE YEDEKLERİ\Visual Studio 2012\Projects\KUCSPROJE\KUCSPROJE\obj\Debug\KUCSPROJE.pdb

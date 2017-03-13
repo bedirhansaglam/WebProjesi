@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99445851-D3CD-459E-8EBB-01DE6666714C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KUCSPROJE</RootNamespace>
+    <AssemblyName>KUCSPROJE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKEditor.NET, Version=3.5.2.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder, Version=2.0.1.1132, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\default.aspx" />
+    <Content Include="admin\mesajlar.aspx" />
+    <Content Include="admin\panelgiris.aspx" />
+    <Content Include="admin\makale.aspx" />
+    <Content Include="admin\duyuru.aspx" />
+    <Content Include="admin\etkinlik.aspx" />
+    <Content Include="admin\banner.aspx" />
+    <Content Include="admin\altkategoriler.aspx" />
+    <Content Include="admin\reklam.aspx" />
+    <Content Include="admin\reklam.xml" />
+    <Content Include="admin\sitemap.aspx" />
+    <Content Include="admin\yorum.aspx" />
+    <Content Include="banner\KUCS-LOGO.png" />
+    <Content Include="banner\mkemal.png" />
+    <Content Include="Global.asax" />
+    <Content Include="iletisim.aspx" />
+    <Content Include="image\ayarlar.png" />
+    <Content Include="image\cikis.png" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="css\acilirmenu.css" />
+    <Content Include="css\ericmeyerreset.css" />
+    <Content Include="css\local.css" />
+    <Content Include="css\style.css" />
+    <Content Include="duyurugoster.aspx" />
+    <Content Include="etkinlik.aspx" />
+    <Content Include="font-awesome\css\font-awesome.css" />
+    <Content Include="font-awesome\css\font-awesome.min.css" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="icerikgoster.aspx" />
+    <Content Include="image\delete.png" />
+    <Content Include="image\down.png" />
+    <Content Include="image\duyuru.png" />
+    <Content Include="image\etkinlik.png" />
+    <Content Include="image\girisyap.png" />
+    <Content Include="image\gizle.png" />
+    <Content Include="image\goruntulenme.png" />
+    <Content Include="image\goster.png" />
+    <Content Include="image\goster_hover.png" />
+    <Content Include="image\iptal.png" />
+    <Content Include="image\istatistik.png" />
+    <Content Include="image\KUCS-LOGO.png" />
+    <Content Include="image\kullanici.png" />
+    <Content Include="image\kullaniciadi.png" />
+    <Content Include="image\mkemal.png" />
+    <Content Include="image\onayla.png" />
+    <Content Include="image\saat.png" />
+    <Content Include="image\save.png" />
+    <Content Include="image\search2.png" />
+    <Content Include="image\sifre.png" />
+    <Content Include="image\up.png" />
+    <Content Include="image\update.png" />
+    <Content Include="image\yorum.png" />
+    <Content Include="img\arrow.png" />
+    <Content Include="img\bg.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="kategoridetay.aspx" />
+    <Content Include="search.aspx" />
+    <Content Include="sliderengine\amazingslider-1.css" />
+    <Content Include="sliderengine\amazingslider.js" />
+    <Content Include="sliderengine\arrows-48-48-3.png" />
+    <Content Include="sliderengine\bottomshadow-110-100-5.png" />
+    <Content Include="sliderengine\bullet-12-12-0.png" />
+    <Content Include="sliderengine\carouselarrows-32-32-0.png" />
+    <Content Include="sliderengine\html5boxplayer.swf" />
+    <Content Include="sliderengine\html5boxplayer_fullscreen.png" />
+    <Content Include="sliderengine\html5boxplayer_hd.png" />
+    <Content Include="sliderengine\html5boxplayer_playpause.png" />
+    <Content Include="sliderengine\html5boxplayer_playvideo.png" />
+    <Content Include="sliderengine\html5boxplayer_volume.png" />
+    <Content Include="sliderengine\initslider-1.js" />
+    <Content Include="sliderengine\jquery.js" />
+    <Content Include="sliderengine\lightbox-close.png" />
+    <Content Include="sliderengine\lightbox-loading.gif" />
+    <Content Include="sliderengine\lightbox-navnext.png" />
+    <Content Include="sliderengine\lightbox-navprev.png" />
+    <Content Include="sliderengine\lightbox-next.png" />
+    <Content Include="sliderengine\lightbox-pause.png" />
+    <Content Include="sliderengine\lightbox-play.png" />
+    <Content Include="sliderengine\lightbox-playvideo.png" />
+    <Content Include="sliderengine\lightbox-prev.png" />
+    <Content Include="sliderengine\navarrows-28-28-0.png" />
+    <Content Include="sliderengine\navbuttonbgimage-28-28-0.png" />
+    <Content Include="sliderengine\navplaypause-28-28-0.png" />
+    <Content Include="sliderengine\play-32-32-0.png" />
+    <Content Include="sliderengine\playvideo-64-64-0.png" />
+    <Content Include="sliderengine\previewarrow-16-8-0.png" />
+    <Content Include="makale.aspx" />
+    <Content Include="socialmedia\facebook.png" />
+    <Content Include="socialmedia\googleplus.png" />
+    <Content Include="socialmedia\iletisim.png" />
+    <Content Include="socialmedia\instagram.png" />
+    <Content Include="socialmedia\linkedin.png" />
+    <Content Include="socialmedia\twitter.png" />
+    <Content Include="socialmedia\youtube.png" />
+    <Content Include="tema\arkaplan.jpg" />
+    <Content Include="uyeol.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\mesajlar.aspx.cs">
+      <DependentUpon>mesajlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\mesajlar.aspx.designer.cs">
+      <DependentUpon>mesajlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\panelgiris.aspx.cs">
+      <DependentUpon>panelgiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\panelgiris.aspx.designer.cs">
+      <DependentUpon>panelgiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\makale.aspx.cs">
+      <DependentUpon>makale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\makale.aspx.designer.cs">
+      <DependentUpon>makale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\duyuru.aspx.cs">
+      <DependentUpon>duyuru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\duyuru.aspx.designer.cs">
+      <DependentUpon>duyuru.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\etkinlik.aspx.cs">
+      <DependentUpon>etkinlik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\etkinlik.aspx.designer.cs">
+      <DependentUpon>etkinlik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\banner.aspx.cs">
+      <DependentUpon>banner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\banner.aspx.designer.cs">
+      <DependentUpon>banner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\altkategoriler.aspx.cs">
+      <DependentUpon>altkategoriler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\altkategoriler.aspx.designer.cs">
+      <DependentUpon>altkategoriler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reklam.aspx.cs">
+      <DependentUpon>reklam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\reklam.aspx.designer.cs">
+      <DependentUpon>reklam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\sitemap.aspx.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\sitemap.aspx.designer.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\yorum.aspx.cs">
+      <DependentUpon>yorum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\yorum.aspx.designer.cs">
+      <DependentUpon>yorum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="duyurugoster.aspx.cs">
+      <DependentUpon>duyurugoster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="duyurugoster.aspx.designer.cs">
+      <DependentUpon>duyurugoster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="etkinlik.aspx.cs">
+      <DependentUpon>etkinlik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="etkinlik.aspx.designer.cs">
+      <DependentUpon>etkinlik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="icerik.Master.cs">
+      <DependentUpon>icerik.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icerik.Master.designer.cs">
+      <DependentUpon>icerik.Master</DependentUpon>
+    </Compile>
+    <Compile Include="icerikgoster.aspx.cs">
+      <DependentUpon>icerikgoster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icerikgoster.aspx.designer.cs">
+      <DependentUpon>icerikgoster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kategoridetay.aspx.cs">
+      <DependentUpon>kategoridetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kategoridetay.aspx.designer.cs">
+      <DependentUpon>kategoridetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sqlbaglantisi.cs" />
+    <Compile Include="makale.aspx.cs">
+      <DependentUpon>makale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="makale.aspx.designer.cs">
+      <DependentUpon>makale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\user.Master.cs">
+      <DependentUpon>user.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users\user.Master.designer.cs">
+      <DependentUpon>user.Master</DependentUpon>
+    </Compile>
+    <Compile Include="uyeol.aspx.cs">
+      <DependentUpon>uyeol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uyeol.aspx.designer.cs">
+      <DependentUpon>uyeol.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\admin.Master" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="font-awesome\less\bordered-pulled.less" />
+    <Content Include="font-awesome\less\core.less" />
+    <Content Include="font-awesome\less\fixed-width.less" />
+    <Content Include="font-awesome\less\font-awesome.less" />
+    <Content Include="font-awesome\less\icons.less" />
+    <Content Include="font-awesome\less\larger.less" />
+    <Content Include="font-awesome\less\list.less" />
+    <Content Include="font-awesome\less\mixins.less" />
+    <Content Include="font-awesome\less\path.less" />
+    <Content Include="font-awesome\less\rotated-flipped.less" />
+    <Content Include="font-awesome\less\spinning.less" />
+    <Content Include="font-awesome\less\stacked.less" />
+    <Content Include="font-awesome\less\variables.less" />
+    <Content Include="font-awesome\scss\font-awesome.scss" />
+    <Content Include="font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="font-awesome\scss\_core.scss" />
+    <Content Include="font-awesome\scss\_fixed-width.scss" />
+    <Content Include="font-awesome\scss\_icons.scss" />
+    <Content Include="font-awesome\scss\_larger.scss" />
+    <Content Include="font-awesome\scss\_list.scss" />
+    <Content Include="font-awesome\scss\_mixins.scss" />
+    <Content Include="font-awesome\scss\_path.scss" />
+    <Content Include="font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="font-awesome\scss\_spinning.scss" />
+    <Content Include="font-awesome\scss\_stacked.scss" />
+    <Content Include="font-awesome\scss\_variables.scss" />
+    <Content Include="img\Thumbs.db" />
+    <Content Include="users\user.Master" />
+    <Content Include="sliderengine\Thumbs.db" />
+    <Content Include="icerik.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="kresim\" />
+    <Folder Include="profilresim\" />
+    <Folder Include="reklam\" />
+    <Folder Include="slider\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49663/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

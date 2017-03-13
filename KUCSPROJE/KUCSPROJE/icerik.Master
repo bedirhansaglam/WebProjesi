@@ -1,0 +1,296 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="icerik.master.cs" Inherits="KUCSPROJE.icerik" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>KASTAMONU UNIVERSITY COMPUTER SOCIETY</title>
+
+    <!-- buralar silinecek-->
+    <style>
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #031269;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height:40px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ded6d6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right:0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding:12px 16px;
+    text-decoration: none;
+    display: block;
+  
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #4251a7;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #031269;
+}
+</style>
+
+
+    <!-- buralar silinecek yukarısı -->
+    <link href="../css/ericmeyerreset.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('li.altmenu').hover(
+                function ()//üzerindeyken tetiklenecek fonksiyon
+                {
+                    $(this).find('ul').removeClass('gizli').addClass('gorunur');
+                },
+            function ()//üzerinden ayrılınca tetiklenecek fonksiyon
+            {
+                $(this).find('ul').removeClass('gorunur').addClass('gizli');
+            });
+        });
+
+    </script>
+    <link href="../css/acilirmenu.css" rel="stylesheet" />
+    <style>
+        body {
+         margin:0;
+        }
+        .wrapper {
+        width:100%;
+        height:1200px;
+        background:#858e92;
+        margin:0 0 0 0;
+        
+        
+        }
+        header {
+        height:40px;
+        width:90%;
+        position:absolute;
+        background-color:#031269;
+        top:212px;
+        margin-left:5%;
+        margin-right:5%;
+       
+        }
+        nav {
+        height:600px;
+        width:330px;
+        margin-top:50px;
+        background-color:#ff6a00;
+        float:left;
+        }
+        section {
+        height:950px;
+        width:80%;
+        margin-top:50px;
+        background-color:#ff6a00;
+        
+        }
+        #logo {
+            height:150px;
+            width:100%;
+            background-color:#ded6d6;
+        }
+
+        #content {
+            height:1000px;
+            width:70%;
+            background-color:#4eb6d1;
+            margin-left:15%;
+            margin-right:10%;
+            position:absolute;
+            top:190px;
+        }
+        .banner
+        { height:200px;
+          width:100%;
+          background-color:#031269;
+          margin:0 0 0 0;
+          padding: 0 0 0 0;
+
+        }
+        .icerik {
+        max-height:950px;
+        min-height:950px;
+        overflow:scroll;
+        width:80%;
+        background-color:white;
+        margin-top:80px;
+        margin-right:10%;
+        margin-left:10%;
+       
+        
+        }
+        .auto-style1 {
+            width: 100%;
+        }
+        .aratb {
+            margin-bottom:10px;
+        }
+        .slider {
+        height:360px;
+        width:60%;
+        position:absolute;
+        background-color:#031269;
+        top:212px;
+        margin-left:20%;
+        margin-right:10%;
+        }
+        .solbaslik {
+            width:90%;
+            height:40px;
+            margin-left:5%;
+            margin-right:5%;
+            margin-top:30px;
+            color:white;
+            background-color:#031269;
+            border:double white 2px;
+            text-align:center;
+            vertical-align:middle;
+        }
+        .solicerik {
+            width:90%;
+            height:auto;
+            margin-left:5%;
+            margin-right:5%;
+            color:black;
+            background-color:white;
+            border:double white 2px;
+            
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+    <script type="text/javascript">
+        <!-- scroll -->
+    $(window).scroll(function () {
+        var yukseklik = $(this).scrollTop();
+
+        if (yukseklik > 212) {
+            $("header").css({
+                "position": "fixed",
+                "top": "0",
+                "background-color": "#031269"
+            })
+        }
+        else {
+
+            $("header").css({
+                "position": "absolute",
+                "top": "212px",
+                "background-color": "#031269"
+            })
+
+        }
+
+    })
+
+    </script>
+
+
+
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css"/>
+    <script src="sliderengine/initslider-1.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body style="background-color:#ded6d6;">
+    <form id="form1" runat="server">
+    <div class="banner">
+            <table class="auto-style1">
+                <tr>
+                    <td style="width:20%; height:200px">
+                        <asp:Image ID="img_logo" runat="server"  Width="200px" Height="200px" /></td>
+                    <td style="width:55%; height:200px; vertical-align: middle;">
+                        <asp:Label ID="lbl_slogan" runat="server"  ForeColor="White" Font-Size="36px"></asp:Label></td>
+                    <td style="width:25%;height:200px">
+                        <asp:Image ID="img_m_kemal" runat="server"  Width="400px" Height="200px" /></td>
+                </tr>
+            </table>
+        </div>
+        <header>
+             <%Response.Write(menutut); %> 
+            <asp:Panel ID="pnl_kullanici" runat="server">
+            <div class="dropdown" style="float:right;margin-left:5px;">
+            <button class="dropbtn">
+                <asp:Label ID="lbl_kadi" runat="server" Text=""></asp:Label></button>
+            <div class="dropdown-content">
+                <a >
+                 &nbsp &nbsp&nbsp Profil&nbsp&nbsp <asp:ImageButton ID="ibtn_ayar" runat="server" ImageUrl="~/image/ayarlar.png" OnClick="ibtn_ayar_Click" /> </a>
+            <a >
+              &nbsp&nbsp&nbsp Çıkış&nbsp&nbsp <asp:ImageButton ID="ibtn_cikis" runat="server" ImageUrl="~/image/cikis.png" OnClick="ibtn_cikis_Click" />
+            </a>
+            </div>
+        </div>
+                </asp:Panel>
+             <div style="text-align:right; height:100%; vertical-align: middle; float:right; margin-left:1px;">
+                 <asp:ImageButton ID="ibtn_ara" runat="server" ImageUrl="~/image/search2.png" Width="32px" Height="32px" ToolTip="ARA" AlternateText="ARA" OnClick="ibtn_ara_Click" />
+             </div>
+             <div style="text-align:right; height:100%; vertical-align: middle; float:right; margin-left:1px; margin-top:5px;">
+                  <asp:TextBox ID="tb_ara" runat="server" CssClass="aratb"></asp:TextBox>
+             </div>
+
+             
+         </header>
+
+         
+
+       
+        <!-- içerik-->
+        <div  class="icerik" style="height:970px; float:left">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+
+        </asp:ContentPlaceHolder>
+        </div>
+        <!-- /içerik-->
+
+        <div  style="height:150px; width:100%; background-color:#031269; margin-top:1200px;">
+             <div style="height:10px; width:100%"></div>
+            <div style=" text-align:left; float:inherit; width:20%; max-height:150px; height:32px; margin-left:40%;margin-right:40%">
+                <asp:ImageButton ID="ibtn_facebook" runat="server" ImageUrl="~/socialmedia/facebook.png" PostBackUrl="https://www.facebook.com/kastamonuuniversitycomputersociety" OnClientClick="document.forms[0].target='_blank'" />&nbsp
+                <asp:ImageButton ID="ibtn_twitter" runat="server" ImageUrl="~/socialmedia/twitter.png" PostBackUrl="https://twitter.com/?lang=tr" OnClientClick="document.forms[0].target='_blank'" />&nbsp
+                <asp:ImageButton ID="instagram" runat="server" ImageUrl="~/socialmedia/instagram.png" OnClientClick="document.forms[0].target='_blank'" PostBackUrl="https://www.instagram.com/" />&nbsp
+                <asp:ImageButton ID="googleplus" runat="server" ImageUrl="~/socialmedia/googleplus.png" OnClientClick="document.forms[0].target='_blank'" PostBackUrl="https://plus.google.com/collections/featured" />&nbsp
+                <asp:ImageButton ID="linkedin" runat="server" ImageUrl="~/socialmedia/linkedin.png" OnClientClick="document.forms[0].target='_blank'" PostBackUrl="https://www.linkedin.com/" />&nbsp
+                <asp:ImageButton ID="youtube" runat="server"  ImageUrl="~/socialmedia/youtube.png" PostBackUrl="https://www.youtube.com/channel/UCxIMMfTw8mkovvl6Wx2cXVw" OnClientClick="document.forms[0].target='_blank'"/>&nbsp
+                <asp:ImageButton ID="iletişim" runat="server" ImageUrl="~/socialmedia/iletisim.png" OnClick="iletişim_Click" /></div>
+            <div style="height:20px; width:100%"></div>
+            <div style=" text-align:left; float:inherit; width:40%; max-height:150px; height:32px; margin-left:30%;margin-right:30%">
+                <asp:Label ID="Label1" runat="server" Text="BU BİR ÖĞRENCİ KURULUŞUDUR | HER HAKKI SAKLIDIR 2016© " ForeColor="White"></asp:Label>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

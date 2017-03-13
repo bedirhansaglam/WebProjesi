@@ -1,0 +1,518 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="user.master.cs" Inherits="KUCSPROJE.users.user" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>KASTAMONU UNIVERSITY COMPUTER SOCIETY</title>
+    <link href="../css/ericmeyerreset.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('li.altmenu').hover(
+                function ()//üzerindeyken tetiklenecek fonksiyon
+                {
+                    $(this).find('ul').removeClass('gizli').addClass('gorunur');
+                },
+            function ()//üzerinden ayrılınca tetiklenecek fonksiyon
+            {
+                $(this).find('ul').removeClass('gorunur').addClass('gizli');
+            });
+        });
+
+    </script>
+    <link href="../css/acilirmenu.css" rel="stylesheet" />
+    <style>
+        body {
+         margin:0;
+        }
+        .wrapper {
+        width:100%;
+        height:1200px;
+        background:#858e92;
+        margin:0 0 0 0;
+        
+        
+        }
+        header {
+        height:40px;
+        width:60%;
+        position:absolute;
+        background-color:#031269;
+        top:575px;
+        margin-left:20%;
+        margin-right:10%;
+       
+        }
+        nav {
+        height:600px;
+        width:330px;
+        margin-top:50px;
+        background-color:#ff6a00;
+        float:left;
+        }
+        section {
+        height:950px;
+        width:80%;
+        margin-top:50px;
+        background-color:#ff6a00;
+        
+        }
+        #logo {
+            height:150px;
+            width:100%;
+            background-color:#ded6d6;
+        }
+
+        #content {
+            height:1000px;
+            width:70%;
+            background-color:#4eb6d1;
+            margin-left:15%;
+            margin-right:10%;
+            position:absolute;
+            top:190px;
+        }
+        .banner
+        { height:200px;
+          width:100%;
+          background-color:#031269;
+          margin:0 0 0 0;
+          padding: 0 0 0 0;
+
+        }
+        .icerik {
+        height:auto;
+        width:60%;
+        background-color:white;
+        margin-top:420px;
+        margin-right:1%;
+        }
+        .auto-style1 {
+            width: 100%;
+            height: 39px;
+        }
+        .aratb {
+            margin-bottom:10px;
+        }
+        .slider {
+        height:360px;
+        width:60%;
+        position:absolute;
+        background-color:#031269;
+        top:212px;
+        margin-left:20%;
+        margin-right:10%;
+        }
+        .solbaslik {
+            width:90%;
+            height:40px;
+            margin-left:5%;
+            margin-right:5%;
+            margin-top:30px;
+            color:white;
+            background-color:#031269;
+            border:double white 2px;
+            text-align:center;
+            vertical-align:middle;
+        }
+        .solicerik {
+            width:90%;
+            height:auto;
+            margin-left:5%;
+            margin-right:5%;
+            color:black;
+            background-color:white;
+            border:double white 2px;
+            
+        }
+        .sagbaslik {
+              width:90%;
+            height:40px;
+            margin-left:5%;
+            margin-right:5%;
+            margin-top:30px;
+            color:white;
+            background-color:#031269;
+            border:double white 2px;
+            text-align:center;
+            vertical-align:middle;
+        }
+        .sagicerik {
+            width:90%;
+            height:auto;
+            margin-left:5%;
+            margin-right:5%;
+            color:black;
+            background-color:white;
+            border:double white 2px;
+        }
+        .auto-style2 {
+            width: 40px;
+        }
+        .auto-style3 {
+            width: 101%;
+        }
+        .footer {
+            position:absolute;
+            left:0px;
+            bottom:0px;
+            
+        }
+        .auto-style4 {
+            height: 39px;
+        }
+        .auto-style5 {
+            height: 39px;
+            width: 39px;
+        }
+        .auto-style6 {
+            width: 100px;
+            height:100px;
+        }
+        .auto-style7 {
+            width: 10px;
+        }
+        .auto-style8 {
+            width: 100px;
+            height: 20px;
+        }
+        .auto-style9 {
+            width: 10px;
+            height: 20px;
+        }
+        .auto-style10 {
+            height: 20px;
+        }
+        .auto-style11 {
+            width: 100%;
+        }
+        .auto-style12 {
+            height: 33px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+    <script type="text/javascript">
+        <!-- scroll -->
+    $(window).scroll(function () {
+        var yukseklik = $(this).scrollTop();
+
+        if (yukseklik > 575) {
+            $("header").css({
+                "position": "fixed",
+                "top": "0",
+                "background-color": "#031269"
+            })
+        }
+        else {
+
+            $("header").css({
+                "position": "absolute",
+                "top": "575px",
+                "background-color": "#031269"
+            })
+
+        }
+
+    })
+
+   
+
+    </script>
+
+
+
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css"/>
+    <script src="sliderengine/initslider-1.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body style="background-color:#ded6d6; width:100%; height:100%; position:relative;">
+    <form id="form1" runat="server">
+    <div style=" margin-right:auto;margin-left:auto;">
+        
+        <div class="banner">
+            <table class="auto-style1">
+                <tr>
+                    <td style="width:20%; height:200px">
+                        <asp:Image ID="img_logo" runat="server"  Width="200px" Height="200px" /></td>
+                    <td style="width:55%; height:200px; vertical-align: middle;">
+                        <asp:Label ID="lbl_slogan" runat="server"  ForeColor="White" Font-Size="36px"></asp:Label></td>
+                    <td style="width:25%;height:200px">
+                        <asp:Image ID="img_m_kemal" runat="server"  Width="400px" Height="200px" /></td>
+                </tr>
+            </table>
+        </div>
+         <!-- slider -->
+        <div class="slider">
+            <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:900px;margin:0px auto 48px;">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+               
+                <asp:DataList ID="dl_slider" runat="server">
+                    <ItemTemplate> <li><a href="icerikgoster.aspx?makaleid=<%#Eval("makaleID") %>"><img src="<%#Eval("makaleResim") %>" alt="<%#Eval("makaleBaslik")%>"  title="<%#Eval("makaleBaslik")%>" /></a>
+                </li></ItemTemplate>
+                </asp:DataList>
+            </ul>
+        </div>
+    </div>
+        </div>
+         <!-- slider bitiş -->
+        <!-- menü başlangıç-->
+         <header>
+             <%Response.Write(menutut); %> 
+             <div style="text-align:right; height:100%; vertical-align: middle; float:right; margin-left:1px;">
+                 <asp:ImageButton ID="ibtn_ara" runat="server" ImageUrl="~/image/search2.png" Width="32px" Height="32px" ToolTip="ARA" AlternateText="ARA" OnClick="ibtn_ara_Click" />
+             </div>
+             <div style="text-align:right; height:100%; vertical-align: middle; float:right; margin-left:1px; margin-top:5px;">
+                  <asp:TextBox ID="tb_ara" runat="server" CssClass="aratb"></asp:TextBox>
+             </div>
+         </header>
+        <!-- menü bitiş-->
+        <!-- sol taraf  başlangıç-->
+        <div style="float:left; height:1380px;width:19%;margin-right:1%; margin-top:10px;">
+            <div class="solbaslik">DUYURULAR</div>
+            <div class="solicerik">
+                <asp:Repeater ID="dl_duyuru" runat="server">
+                    <ItemTemplate>
+                         <marquee align="middle" scrollamount="3" height="130px" width="100%" direction="up" scrolldelay="100">
+                    <table class="auto-style1">
+                    <tr>
+                        <td style="width:10%;">
+                            <asp:Image ID="img_etkinlik" runat="server" Width="32px" Height="32px" ImageUrl="~/image/duyuru.png"/></td>
+                        <td style="width:90%;text-align:left;">
+                             <a id="A1" href='<%#Eval("duyuru_id","~/duyurugoster.aspx?duyuru_id={0}") %>' runat="server">
+
+                        <p style="text-align:left"><%#Eval("d_baslik") %>
+                    </a>
+                        </td>
+                    </tr>
+                      <tr>
+                          <td colspan="2" style="text-align:right;font-size:small;">
+                              <p><%#Eval("d_tarih") %></p>
+                          </td>
+                      </tr>
+                </table>
+                             <div style="border-width: thin; border-color: #000080; width:100%; border-bottom-style: groove;"></div>
+                         </marquee>   
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+
+
+            <div class="solbaslik">ETKİNLİKLER</div>
+            <div class="solicerik">
+                <asp:Repeater ID="r_etkinlikler" runat="server">
+                    <ItemTemplate>
+                         <marquee align="middle" scrollamount="3" height="130px" width="100%" direction="up" scrolldelay="100">
+                    <table class="auto-style1">
+                    <tr>
+                        <td style="width:10%;">
+                            <asp:Image ID="img_etkinlik" runat="server" Width="32px" Height="32px" ImageUrl="~/image/etkinlik.png" /></td>
+                        <td style="width:90%;text-align:left;">
+                             <a id="A1" href='<%#Eval("etkinlik_id","~/etkinlik.aspx?etkinlik_id={0}") %>' runat="server">
+
+                        <p style="text-align:left"><%#Eval("e_baslik") %>
+                    </a>
+                        </td>
+                    </tr>
+                      <tr>
+                          <td colspan="2" style="text-align:right;font-size:small;">
+                              <p><%#Eval("e_tarih") %></p>
+                          </td>
+                      </tr>
+                </table>
+                            <div style="border-width: thin; border-color: #000080; width:100%; border-bottom-style: groove;"></div>
+                         </marquee>   
+                    </ItemTemplate>
+                </asp:Repeater>
+
+
+            </div>
+
+            <div class="solbaslik">REKLAMLAR</div>
+            <div class="solicerik">
+                <asp:AdRotator ID="ad_reklam" runat="server" Target="_blank" Width="100%" AdvertisementFile="~/admin/reklam.xml" />
+                <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/admin/reklam.xml"></asp:XmlDataSource>
+            </div>
+
+        </div>
+        <!-- sol taraf bitiş-->
+        <!-- içerik-->
+        <div  class="icerik" style="min-height:970px;max-height:970px; float:left; overflow:scroll;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+
+        </asp:ContentPlaceHolder>
+        </div>
+         <!-- sağ bölüm başlangıç -->
+        <div style="float:left; height:1380px;width:19%; margin-top:10px;">
+            <asp:Panel ID="pnl_kullanicigiris" runat="server">
+            <div class="sagbaslik">
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style2">
+                            <asp:Image ID="img_kullanici" runat="server" Width="24" Height="24"  ImageUrl="~/image/kullanici.png"/></td>
+                        <td>KULLANICI GİRİŞİ</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sagicerik">
+
+                <table class="auto-style3">
+                    <tr>
+                        <td>
+                            <asp:Image ID="img_kadi" runat="server" Width="24px" Height="24px" ImageUrl="~/image/kullaniciadi.png" /></td>
+                        <td>:</td>
+                        <td>
+                            <asp:TextBox ID="tb_kadi" runat="server" ></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td><asp:Image ID="img_sifre" runat="server" Width="24px" Height="24px" ImageUrl="~/image/sifre.png" />
+                            </td>
+                        <td>:</td>
+                        <td>
+                            <asp:TextBox ID="tb_sifre" runat="server" TextMode="Password" MaxLength="8" ></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td >
+                            <asp:CheckBox ID="cb_benihatirla" runat="server" Text="beni hatırla" AutoPostBack="True" /></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="font-size:12px;">
+                            <asp:LinkButton ID="lb_sifreunuttum" runat="server" PostBackUrl="~/uyeol.aspx?uye=2">Şifrenimi unuttun?</asp:LinkButton></td>
+                    </tr>
+                     <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="font-size:12px;">
+                            <asp:LinkButton ID="lb_kayıtol" runat="server" PostBackUrl="~/uyeol.aspx?uye=1">Kayıt Ol</asp:LinkButton></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td style="text-align:right;">
+                            <asp:Button ID="btn_giris" runat="server" Text="Giriş Yap" ForeColor="White" BackColor="#031269" Width="50%" Height="30px" OnClick="btn_giris_Click" /></td>
+                    </tr>
+                    
+                </table>
+
+            </div>
+                </asp:Panel>
+            <asp:Panel ID="pnl_kullanici" runat="server" Width="100%" Height="100px">
+            <div class="sagbaslik" style="max-height:100px; min-height:100px; vertical-align: top;">
+                
+
+                        <table class="auto-style11">
+                            <tr>
+                                <td class="auto-style6" rowspan="2" style="height:100px;width:100px;">
+                                    <asp:Image ID="img_profil" runat="server"  Width="60px" Height="60px" /></td>
+                                <td style="text-align:left; font-size:18px; height:20px;" class="auto-style12">
+                                    <asp:Label ID="lbl_kadi" runat="server" Text=""></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right; height:60px;">
+                                    <asp:ImageButton ID="ibtn_ayarlar" runat="server" ImageUrl="~/image/ayarlar.png" ToolTip="Profil" AlternateText="Profil" PostBackUrl="~/uyeol.aspx?uye=3" Width="24px" Height="24px" OnClick="ibtn_ayarlar_Click" />
+                                  &nbsp <asp:ImageButton ID="ibtn_cikis" runat="server" ImageUrl="~/image/cikis.png" AlternateText="Çıkış" ToolTip="Çıkış"  Width="24px" Height="24px" OnClick="ibtn_cikis_Click" /></td>
+                            </tr>
+                        </table>
+                
+                    
+            </div>
+                </asp:Panel>
+            <div class="sagbaslik">
+
+                <table class="auto-style3">
+                    <tr>
+                        <td class="auto-style5">
+                            <asp:Image ID="img_istatistik" runat="server" Width="32px" Height="32px" ImageUrl="~/image/istatistik.png" /></td>
+                        <td class="auto-style4">KULLANICI SAYACI</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="sagicerik">
+                <table class="auto-style3">
+                    <tr>
+                        <td class="auto-style8">ONLİNE</td>
+                        <td class="auto-style9">:</td>
+                        <td class="auto-style10">
+                            <asp:Label ID="lbl_online" runat="server" Text="0"></asp:Label></td>
+                    </tr>
+                </table>
+                <asp:DataList ID="dl_sayac" runat="server" Width="100%">
+                    <ItemTemplate>
+
+                <table class="auto-style3">
+                    
+                    <tr>
+                        <td class="auto-style8">BUGÜN</td>
+                        <td class="auto-style9">:</td>
+                        <td class="auto-style10">
+                            <asp:Label ID="lbl_gunluk" runat="server" Text='<%# Eval("gunluk") %>'></asp:Label></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style8">AYLIK</td>
+                        <td class="auto-style9">:</td>
+                        <td class="auto-style10">
+                            <asp:Label ID="lbl_aylik" runat="server" Text='<%# Eval("aylik") %>'></asp:Label></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style8">YILLIK</td>
+                        <td class="auto-style9">:</td>
+                        <td class="auto-style10">
+                            <asp:Label ID="lbl_yillik" runat="server" Text='<%# Eval("yillik") %>'></asp:Label></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style8">TOPLAM</td>
+                        <td class="auto-style9">:</td>
+                        <td class="auto-style10">
+                            <asp:Label ID="lbl_toplam" runat="server" Text='<%# Eval("toplam") %>'></asp:Label></td>
+                    </tr>
+                </table>
+              </ItemTemplate>
+                </asp:DataList>
+
+            </div>
+            
+            <div class="sagbaslik">SİTEMAP</div>
+            <div class="sagicerik">
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1"></asp:TreeView>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </div>
+
+        </div>
+        <!-- sağ bölüm bitiş -->
+
+        <!-- footer başlangıç-->
+        <div  style="height:150px; width:100%; background-color:#031269; margin-top:1410px;">
+             <div style="height:10px; width:100%"></div>
+            <div style=" text-align:left; float:inherit; width:20%; max-height:150px; height:32px; margin-left:40%;margin-right:40%">
+                <asp:ImageButton ID="ibtn_facebook" runat="server" ImageUrl="~/socialmedia/facebook.png" PostBackUrl="https://www.facebook.com/kastamonuuniversitycomputersociety" OnClientClick="document.forms[0].target='_blank'" />&nbsp
+                <asp:ImageButton ID="ibtn_twitter" runat="server" ImageUrl="~/socialmedia/twitter.png" PostBackUrl="https://twitter.com/?lang=tr" OnClientClick="document.forms[0].target='_blank'" />&nbsp
+                <asp:ImageButton ID="instagram" runat="server" ImageUrl="~/socialmedia/instagram.png" OnClientClick="document.forms[0].target='_blank'" PostBackUrl="https://www.instagram.com/" />&nbsp
+                <asp:ImageButton ID="googleplus" runat="server" ImageUrl="~/socialmedia/googleplus.png" OnClientClick="document.forms[0].target='_blank'" PostBackUrl="https://plus.google.com/collections/featured" />&nbsp
+                <asp:ImageButton ID="linkedin" runat="server" ImageUrl="~/socialmedia/linkedin.png" OnClientClick="document.forms[0].target='_blank'" PostBackUrl="https://www.linkedin.com/" />&nbsp
+                <asp:ImageButton ID="youtube" runat="server"  ImageUrl="~/socialmedia/youtube.png" PostBackUrl="https://www.youtube.com/channel/UCxIMMfTw8mkovvl6Wx2cXVw" OnClientClick="document.forms[0].target='_blank'"/>&nbsp
+                <asp:ImageButton ID="iletişim" runat="server" ImageUrl="~/socialmedia/iletisim.png" OnClick="iletişim_Click" /></div>
+            <div style="height:20px; width:100%"></div>
+            <div style=" text-align:left; float:inherit; width:40%; max-height:150px; height:32px; margin-left:30%;margin-right:30%">
+                <asp:Label ID="Label1" runat="server" Text="BU BİR ÖĞRENCİ KURULUŞUDUR | HER HAKKI SAKLIDIR 2016© " ForeColor="White"></asp:Label>
+            </div>
+        </div>
+        <!-- footer bitiş-->
+    </div>
+    </form>
+</body>
+</html>
